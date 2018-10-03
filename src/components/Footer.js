@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <nav className="App-header">
+        <nav>
           <div className="Footer">
           Footer çalışıyor.
           </div>
