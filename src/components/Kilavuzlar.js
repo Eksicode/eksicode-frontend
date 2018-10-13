@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 const Klavuzlar = () => {
-  document.title = 'Eksicode.org - Klavuzlar';
+  document.title = 'Eksicode.org - Kılavuzlar';
   return (
     <div className="container">
-      <h4 classNem="center">Klavuzlar</h4>
+      <h4 classNem="center">Kılavuzlar</h4>
       <p>sdfdsfsd</p>
     </div>
   );

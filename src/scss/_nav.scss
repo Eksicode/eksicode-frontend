@@ -1,11 +1,22 @@
-nav{
+nav {
   font-weight: 500; 
   font-size: 0.875rem;
   letter-spacing: .5px;
   background-color: var(--night);
- 
+  ul {
+    li {
+      a {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 1300px) {
+    ul {
+      display: none;
+    }
+  }
 }
-.logo{
+.logo {
   margin-top: 1.2rem;
   height: 2rem;
 }

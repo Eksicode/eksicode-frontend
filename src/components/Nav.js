@@ -9,7 +9,7 @@ const Nav = () => {
         <Link to="/" className="brand-logo"><img className="logo" src={require('../assets/eksi-code-logo.png')} /></Link>
         <ul className="right">
           <li><Link to="/amacimiz">AMACIMIZ</Link></li>
-          <li><Link to="/klavuzlar">KLAVUZLAR</Link></li>
+          <li><Link to="/kilavuzlar">KILAVUZLAR</Link></li>
           <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
           <li><Link to="/kaynaklar">KAYNAKLAR</Link></li>
           <li><Link to="/projeler">PROJELER</Link></li>
