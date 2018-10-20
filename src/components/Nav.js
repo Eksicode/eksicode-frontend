@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 class Nav extends Component {
-  componentDidMount() {
-
-  }
   render() {
     return (
       <nav className="nav-wrapper black">
