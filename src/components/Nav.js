@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+class Nav extends Component {
+  componentDidMount() {
 
-const Nav = () => {
-  return (
-    <nav className="nav-wrapper black">
-      <div className="container">
-        <Link to="/" className="brand-logo"><img className="logo" src={require('../assets/eksi-code-logo.png')} /></Link>
-        <ul className="right">
-          <li><Link to="/amacimiz">AMACIMIZ</Link></li>
-          <li><Link to="/kilavuzlar">KILAVUZLAR</Link></li>
-          <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
-          <li><Link to="/kaynaklar">KAYNAKLAR</Link></li>
-          <li><Link to="/projeler">PROJELER</Link></li>
-          <li><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>
-          <li><Link to="/iletisim">İLETİŞİM</Link></li>
-        </ul>
-      </div>
-    </nav>
-  )
+  }
+  render() {
+    return (
+      <nav className="nav-wrapper black">
+        <div className="container">
+          <Link to="/" className="brand-logo"><img className="logo" src={require('../assets/eksi-code-logo.png')} /></Link>
+          <ul className="right">
+            <li className="desktop"><Link to="/amacimiz">AMACIMIZ</Link></li>
+            <li className="desktop"><Link to="/kilavuzlar">KILAVUZLAR</Link></li>
+            <li className="desktop"><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
+            <li className="desktop"><Link to="/kaynaklar">KAYNAKLAR</Link></li>
+            <li className="desktop"><Link to="/projeler">PROJELER</Link></li>
+            <li className="desktop"><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>
+            <li className="desktop"><Link to="/iletisim">İLETİŞİM</Link></li>
+            <li className="mobile"><a class="waves-effect waves-light" href="#"><i className="material-icons">menu</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    )
+  }
 }
 
 export default Nav;

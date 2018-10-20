@@ -10,6 +10,7 @@ import Projeler from './components/Projeler';
 import Kariyer from './components/Kariyer';
 import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
+import Sidenav from './components/Sidenav';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Nav />
+          <Sidenav />
           <Route exact path='/' component={Main} />
           <Route path='/amacimiz' component={Amacimiz} />
           <Route path='/kaynaklar' component={Kaynaklar} />
