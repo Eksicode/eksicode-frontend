@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+.btn-small, .btn-small:hover, .btn-small:focus {
+  background-color: var(--eksicode);
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

@@ -9,9 +9,9 @@ const Main = () => {
         background={require('../assets/testbg1.jpeg')}
       >
         <div className="container">
-            <h1>Test</h1>
-            <h2>açıklama</h2>
-            <a href="#" className="button">test</a>
+            <h1>Yazılımcı Geliştirme Platformu.</h1>
+            <p>ekşiCode, yazılımcıların serüveninde onları yalnız bırakmaz, arkasında durur.</p>
+            <a href="#" className="btn-small waves-effect">Bize Katılın!</a>
         </div>
       </Jumbotron>
       <div className="container">
