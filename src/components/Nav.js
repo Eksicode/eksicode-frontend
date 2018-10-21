@@ -15,7 +15,7 @@ class Nav extends Component {
             <li className="desktop"><Link to="/projeler">PROJELER</Link></li>
             <li className="desktop"><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>
             <li className="desktop"><Link to="/iletisim">İLETİŞİM</Link></li>
-            <li className="mobile"><a class="waves-effect waves-light" href="#"><i className="material-icons">menu</i></a></li>
+            <li className="mobile"><a className="waves-effect waves-light" href="#"><i className="material-icons">menu</i></a></li>
           </ul>
         </div>
       </nav>
