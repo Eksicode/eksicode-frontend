@@ -1,0 +1,37 @@
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .card {
+    padding-bottom: 1.5em;
+    border: 1.2px solid black;
+    box-shadow: none;
+    background: none;
+  }
+  .card-content {
+    height: 15em;
+  }
+  .btn-small {
+    background-color: white;
+    border: 1px solid var(--night);
+    box-shadow: none;
+    color: var(--night);
+    img {
+      margin-right: 0.8em;
+    }
+  }
+  .btn-small:focus {
+    background-color: white;
+  }
+  .btn-small:hover {
+    transform: translateY(-0.4em) scale(1.12);
+    background-color: var(--mavi);
+  }
+  .logos {
+    font-size: 4rem;
+    color: red;
+  }
+  
