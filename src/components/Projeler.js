@@ -4,7 +4,7 @@ const Projeler = () => {
   document.title = 'Eksicode.org - Projeler';
   return (
     <div className="container">
-      <h4 classNem="center">Projeler</h4>
+      <h4 className="center">Projeler</h4>
       <p>sdfdsfsd</p>
     </div>
   );
