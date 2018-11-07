@@ -1,0 +1,90 @@
+h2 {
+  font-weight: 600;
+}
+p {
+  color: var(--gri);
+}
+.box {
+  height: 0.6rem;
+  background-color: var(--acikgri);
+  position: absolute;
+  z-index: -1;
+  margin-left: -1rem;
+  margin-top: -3.35rem;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
+  &__kaynaklar {
+    width: 20.2rem;
+  }
+  &__projeler {
+    width: 16.2rem;
+  }
+  &__gruplar {
+    width: 15.8rem;
+  }
+  &__kariyer {
+    width: 18.5rem;
+    @media only screen and (max-width: 417px){
+        width: 14.5rem;
+    }
+  }
+}
+h2:hover + .box {
+  height: 5rem;
+  margin-top: -5.8rem;
+  &__kaynaklar {
+    background-color: var(--light-yesil);
+  }
+  &__projeler {
+    background-color: var(--kurbaga-yesili);
+  }
+  &__gruplar {
+    background-color: var(--mavi);
+  }
+  &__kariyer {
+    background-color: var(--eksicode);
+    @media only screen and (max-width: 417px){
+        height: 10rem;
+        margin-top: -10.8rem;
+    }
+  }
+  
+}
+.drawings {
+  margin-top: -14rem;
+  position: relative;
+  z-index: -1;
+}
+.plane {
+  margin-top: -1em;
+  margin-right: 5em;
+}
+.eksi {
+  padding-bottom: 0;
+  .row {
+    margin-bottom: 0;
+  }
+  .entry {
+    height: 10rem;
+    width: 14rem;
+    margin-bottom: 3em;
+    p {
+      padding: 1em 1em 0 1em;
+      font-size: 0.75rem;
+      color: black;
+    }
+    .bubble {
+      z-index: -1;
+      width: 15rem;
+      position: absolute;
+    }
+    .author {
+      font-weight: 600;
+      font-size: 0.8rem;
+      float: right;
+      color: var(--eksicode);
+    }
+  }
+  .people {
+    height: 10rem;
+  }
+}
