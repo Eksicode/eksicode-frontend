@@ -7,7 +7,7 @@ class Nav extends Component {
       <div className="navbar-fixed">
         <nav className="nav-wrapper black">
           <div className="container">
-            <Link to="/" className="brand-logo"><img className="logo" src={require('../assets/eksi-code-logo.png')} /></Link>
+            <Link to="/" className="brand-logo"><img className="logo" alt="EkşiCode Logosu" src={require('../assets/eksi-code-logo.png')} /></Link>
             <ul className="right">
               <li className="desktop"><Link to="/amacimiz">AMACIMIZ</Link></li>
               <li className="desktop"><Link to="/kilavuzlar">KILAVUZLAR</Link></li>
