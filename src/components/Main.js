@@ -20,7 +20,7 @@ class Main extends Component {
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l8 offset-l4">
-                <h2>Yazılımcı Geliştirme Platformu</h2>
+                <h1>Yazılımcı Geliştirme Platformu</h1>
                 <p className="flow-text">
                   ekşiCode, yazılımcıların serüveninde onları yalnız bırakmaz,
                   arkasında durur.
@@ -75,7 +75,7 @@ class Main extends Component {
           <div className="container">
             <div className="row">
               <div className="col s12 m8 offset-m4 l6 offset-l6">
-                <h2><Link to="/telegram-gruplari" style={{color: 'black'}}>Gruplar</Link></h2>
+                <h2><Link to="/telegram-gruplari" style={{color: 'black'}}>Telegram Grupları</Link></h2>
                 <div className="box box__gruplar"></div>
                 <p className="flow-text">
                   Telegram gruplarına katılıp öğrenirken öğretebilirsin.
