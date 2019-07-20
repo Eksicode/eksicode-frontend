@@ -28,10 +28,11 @@ class Telegram extends Component {
           </p>
           <a
             href="https://t.me/joinchat/G0kqtVFVFl2cWMnmJdUniw"
+            rel="noopener noreferrer"
             target="_blank"
             className="btn-small blue waves-effect waves"
           >
-            <img src={TelegramLogo} height="12em" />
+            <img src={TelegramLogo} height="12em" alt=""/>
             Telegram'ı İndir
           </a>
         </div>
