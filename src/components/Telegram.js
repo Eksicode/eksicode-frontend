@@ -8,15 +8,11 @@ class Telegram extends Component {
       groups: []
     }
   }
-  
   componentDidMount() {
     document.title = "Eksicode.org - Telegram Grupları";
     fetch("http://api.eksicode.org/telegrams")
     .then(res => res.json())
     .then(list => this.setState({groups: list}))
-  }
-  componentDidUpdate() {
-    console.log(this.state)
   }
   render() {
     return (
