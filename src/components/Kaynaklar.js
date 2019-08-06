@@ -1,109 +1,56 @@
 import React, { Component } from "react";
 
-const Kaynaklar = () => {
-	document.title = "Eksicode.org - Kaynaklar";
-	return (
+class Kaynaklar extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			sources: [],
+			pageNum: 0
+		}
+	}
+	componentDidMount() {
+		document.title = "Eksicode.org - Kaynaklar";
+		fetch('http://api.eksicode.org/kaynaklars?_limit=10')
+		.then(res => res.json())
+		.then(data => this.setState({sources: data}))
+	}
+	componentDidUpdate() {
+		if (this.state.pageNum >= 1) {
+			fetch(`http://api.eksicode.org/kaynaklars?_start=${this.state.pageNum * 10}&_limit=10`)
+			.then(res => res.json())
+			.then(data => this.setState({sources: data}))
+		}
+	}
+	render() {
+		return (
 		<div className="container">
 			<h4 className="center">Kaynaklar</h4>
 			<ul>
-				<li>
-					<a href="https://github.com/kamranahmedse/developer-roadmap">
-						Web Developer Roadmap 2018 (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/dipakkr/A-to-Z-Resources-for-Students">
-						Ogrenciler icin A'dan Z'ye Kaynaklar(Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-tr.md#javascript">
-						Ucretsiz Programlama Kitaplari (Turkce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/AlexisAhmed/free-programming-books/blob/master/free-programming-books.md">
-						Ucretsiz Programlama Kitaplari (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/rossant/awesome-math">
-						Matematik Kaynaklari (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/sindresorhus/awesome">
-						Bilgisayar ve Programcilik Hakkinda Listeler (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/sahinyanlik/javascript-tutorial-tr">
-						Javascript Tutorial (Turkce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/kieranmv95/Front-End-Wizard">
-						Frontend tutorial ve kaynaklar (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/connor11528/coding-interviews">
-						Coding Interview (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/ossu/computer-science">
-						Ucretsiz Computer Science dersleri (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/dypsilon/frontend-dev-bookmarks">
-						Frontend sik kullanilanlar listesi (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/dypsilon/frontend-dev-bookmarks">
-						Frontend sik kullanilanlar listesi (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/i0natan/nodebestpractices#translations">
-						NodeJs Best Practices (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/getify/You-Dont-Know-JS">
-						You-Dont-Know-JS Book (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/tuvtran/project-based-learning">
-						Proje Bazli Ogrenme icin Kaynaklar (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/trekhleb/javascript-algorithms">
-						Javascript algoritmalari (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/oyilmaztekin/JavaScript-Camp-2018-Ileri-JavaScipt">
-						Ileri Javascript Notlari (Turkce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/adam-golab/react-developer-roadmap">
-						React Developer Roadmap 2018 (Ingilizce)
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/guillaume-chevalier/Awesome-Deep-Learning-Resources">
-						Deep Learning Kaynaklari (Ingilizce)
-					</a>
-				</li>
+				<div className="row">
+				{this.state.sources.map(e => {
+					return (
+				<div className="col s3">
+					<div className="card green lighten-2">
+						<div className="card-content white-text">
+							<span className="card-title center">
+								{e.doc_name}
+							</span>
+						</div>
+						<div className="card-action black center">
+							<a href={e.doc_link}>
+								Git
+							</a>
+						</div>
+					</div>
+					</div>
+					)
+				})}
+				</div>
 			</ul>
 		</div>
 	);
+	}
+	
 };
 
 export default Kaynaklar;

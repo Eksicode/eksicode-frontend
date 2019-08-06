@@ -19,9 +19,8 @@ class Sidenav extends Component {
     return (
       <ul className="sidenav">
         <li><Link to="/amacimiz">AMACIMIZ</Link></li>
-        <li><Link to="/kilavuzlar">KILAVUZLAR</Link></li>
-        <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
         <li><Link to="/kaynaklar">KAYNAKLAR</Link></li>
+        <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
         <li><Link to="/projeler">PROJELER</Link></li>
         <li><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>
         <li><Link to="/iletisim">İLETİŞİM</Link></li>
