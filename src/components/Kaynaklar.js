@@ -29,23 +29,22 @@ class Kaynaklar extends Component {
 				<div className="row">
 				{this.state.sources.map(e => {
 					return (
-				<div className="col s3">
-					<div className="card green lighten-2">
-						<div className="card-content white-text">
-							<span className="card-title center">
-								{e.doc_name}
-							</span>
+						<div className="col s6 m4">
+						  <div className="card light-green">
+							<div className="card-content white-text">
+							  <span className="card-title">{e.doc_name}</span>
+							</div>
+							<div className="card-action">
+							  <a className="black-text" target="_blank" rel="noopener noreferrer" href={e.doc_link}>Kaynağa Git</a>
+							</div>
+						  </div>
 						</div>
-						<div className="card-action black center">
-							<a href={e.doc_link}>
-								Git
-							</a>
-						</div>
-					</div>
-					</div>
 					)
 				})}
 				</div>
+			</ul>
+			<ul className="pagination">
+
 			</ul>
 		</div>
 	);
