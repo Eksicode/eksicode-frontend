@@ -5,21 +5,13 @@ class Kaynaklar extends Component {
 		super(props)
 		this.state = {
 			sources: [],
-			pageNum: 0
 		}
 	}
 	componentDidMount() {
 		document.title = "Eksicode.org - Kaynaklar";
-		fetch('http://api.eksicode.org/kaynaklars?_limit=10')
+		fetch('http://api.eksicode.org/kaynaklars')
 		.then(res => res.json())
 		.then(data => this.setState({sources: data}))
-	}
-	componentDidUpdate() {
-		if (this.state.pageNum >= 1) {
-			fetch(`http://api.eksicode.org/kaynaklars?_start=${this.state.pageNum * 10}&_limit=10`)
-			.then(res => res.json())
-			.then(data => this.setState({sources: data}))
-		}
 	}
 	render() {
 		return (
@@ -42,9 +34,6 @@ class Kaynaklar extends Component {
 					)
 				})}
 				</div>
-			</ul>
-			<ul className="pagination">
-
 			</ul>
 		</div>
 	);
