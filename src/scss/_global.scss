@@ -8,6 +8,11 @@ body {
   background-color: var(--eksicode);
 }
 
+.disabled {
+  cursor: default;
+  color: #cdcdcd;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
