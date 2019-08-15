@@ -53,7 +53,7 @@ class Kaynaklar extends Component {
         let pages = [];
         for (let i = 0; i < this.state.pageCount; i++) {
             pages.push(
-                <li
+                <li key={i}
                 className={`${
                         this.state.pageNum === i ? "active light-green" : ""
                     }  waves-effect`}
@@ -86,7 +86,7 @@ class Kaynaklar extends Component {
                                     <div className="row">
                                         {this.state.sources.map(e => {
                                             return (
-                                                <div className="col xl4 l4 m6 s12">
+                                                <div className="col xl4 l4 m6 s12" key={e.id} >
                                                     <div className="card hoverable eksicode">
                                                         <div className="card-content white-text">
                                                             <span className="card-title">
