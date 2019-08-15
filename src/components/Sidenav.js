@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import M from 'materialize-css';
 
 class Sidenav extends Component {
@@ -18,12 +18,13 @@ class Sidenav extends Component {
   render() {
     return (
       <ul className="sidenav">
-        <li><Link to="/amacimiz">AMACIMIZ</Link></li>
+        
         <li><Link to="/kaynaklar">KAYNAKLAR</Link></li>
         <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
+        {/*<li><Link to="/amacimiz">AMACIMIZ</Link></li>
         <li><Link to="/projeler">PROJELER</Link></li>
         <li><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>
-        <li><Link to="/iletisim">İLETİŞİM</Link></li>
+    <li><Link to="/iletisim">İLETİŞİM</Link></li>*/}
       </ul>
     )
   }

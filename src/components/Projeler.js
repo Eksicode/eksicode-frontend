@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React/*, { Component }*/ from 'react';
 
 const Projeler = () => {
   document.title = 'Eksicode.org - Projeler';

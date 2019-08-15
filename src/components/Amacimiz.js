@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React/*, { Component }*/ from 'react';
 
 const Amacimiz = () => {
   document.title = 'Eksicode.org - Amacımız';

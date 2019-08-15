@@ -17,7 +17,7 @@ class Kaynaklar extends Component {
         fetch("http://api.eksicode.org/kaynaklars/count")
             .then(res => res.text())
             .then(data => {
-                const count = parseInt(data);
+                const count = parseInt(data, 10);
                 let pageCount;
                 if (count % 12 > 0) {
                     pageCount = Math.floor(count / 12) + 1;
@@ -72,7 +72,7 @@ class Kaynaklar extends Component {
                     <div className="row">
                         {this.state.sources.map(e => {
                             return (
-                                <div className="col s6 m4">
+                                <div className="col xl4 l4 m6 s12">
                                     <div className="card light-green">
                                         <div className="card-content white-text">
                                             <span className="card-title">
@@ -99,7 +99,7 @@ class Kaynaklar extends Component {
                     <li
                         onClick={this.prevPage.bind(this)}
                         class={
-                            this.state.pageNum == 0
+                            this.state.pageNum === 0
                                 ? "disabled"
                                 : "waves-effect"
                         }
@@ -110,7 +110,7 @@ class Kaynaklar extends Component {
                     <li
                         onClick={this.nextPage.bind(this)}
                         class={
-                            this.state.pageNum == this.state.pageCount - 1
+                            this.state.pageNum === this.state.pageCount - 1
                                 ? "disabled"
                                 : "waves-effect"
                         }
