@@ -4,8 +4,26 @@ body {
   padding: 0;
 }
 
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
 .btn-small, .btn-small:hover, .btn-small:focus {
   background-color: var(--eksicode);
+}
+
+.eksicode {
+  background-color: var(--eksicode) !important;
+}
+
+.spinner-eksicode-only {
+  border-color: var(--eksicode) !important;
 }
 
 .disabled {

@@ -67,57 +67,99 @@ class Kaynaklar extends Component {
     render() {
         return (
             <div className="container">
-                <h4 className="center">Kaynaklar</h4>
-                <ul>
-                    <div className="row">
-                        {this.state.sources.map(e => {
-                            return (
-                                <div className="col xl4 l4 m6 s12">
-                                    <div className="card light-green">
-                                        <div className="card-content white-text">
-                                            <span className="card-title">
-                                                {e.doc_name}
-                                            </span>
+                <div className="row">
+                    <div className="col m12 l6">
+                        <h2>Kaynaklar</h2>
+                    </div>
+                    <div className="col m12 l6">
+                        <p className="flow-text">
+                            İlgilendiğin yazılım dili veya konular ile ilgili
+                            kaynakları burada bulabilirsin.
+                        </p>
+                    </div>
+                </div>
+                {(() => {
+                    if (this.state.sources.length) {
+                        return (
+                            <div className="row">
+                                <ul>
+                                    <div className="row">
+                                        {this.state.sources.map(e => {
+                                            return (
+                                                <div className="col xl4 l4 m6 s12">
+                                                    <div className="card hoverable eksicode">
+                                                        <div className="card-content white-text">
+                                                            <span className="card-title">
+                                                                {e.doc_name}
+                                                            </span>
+                                                        </div>
+                                                        <div className="row center">
+                                                            <a
+                                                                href={
+                                                                    e.doc_link
+                                                                }
+                                                                target="_blank"
+                                                                className="btn-small waves-effect waves hover-kaynak"
+                                                            >
+                                                                Kaynağa git
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </ul>
+                                <ul class="pagination center">
+                                    <li
+                                        onClick={this.prevPage.bind(this)}
+                                        class={
+                                            this.state.pageNum === 0
+                                                ? "disabled"
+                                                : "waves-effect"
+                                        }
+                                    >
+                                        <i class="material-icons">
+                                            chevron_left
+                                        </i>
+                                    </li>
+                                    {this.createPages()}
+                                    <li
+                                        onClick={this.nextPage.bind(this)}
+                                        class={
+                                            this.state.pageNum ===
+                                            this.state.pageCount - 1
+                                                ? "disabled"
+                                                : "waves-effect"
+                                        }
+                                    >
+                                        <i class="material-icons">
+                                            chevron_right
+                                        </i>
+                                    </li>
+                                </ul>
+                            </div>
+                        );
+                    } else {
+                        return (
+                            <div className="row center">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-eksicode-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle" />
                                         </div>
-                                        <div className="card-action">
-                                            <a
-                                                className="black-text"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={e.doc_link}
-                                            >
-                                                Kaynağa Git
-                                            </a>
+                                        <div class="gap-patch">
+                                            <div class="circle" />
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle" />
                                         </div>
                                     </div>
                                 </div>
-                            );
-                        })}
-                    </div>
-                </ul>
-                <ul class="pagination center">
-                    <li
-                        onClick={this.prevPage.bind(this)}
-                        class={
-                            this.state.pageNum === 0
-                                ? "disabled"
-                                : "waves-effect"
-                        }
-                    >
-                        <i class="material-icons">chevron_left</i>
-                    </li>
-                    {this.createPages()}
-                    <li
-                        onClick={this.nextPage.bind(this)}
-                        class={
-                            this.state.pageNum === this.state.pageCount - 1
-                                ? "disabled"
-                                : "waves-effect"
-                        }
-                    >
-                        <i class="material-icons">chevron_right</i>
-                    </li>
-                </ul>
+                            </div>
+                        );
+                    }
+                })()}
             </div>
         );
     }
