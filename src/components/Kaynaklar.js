@@ -69,7 +69,7 @@ class Kaynaklar extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col m12 l6">
-                        <h2>Kaynaklar</h2>
+                        <h1>Kaynaklar</h1>
                     </div>
                     <div className="col m12 l6">
                         <p className="flow-text">
