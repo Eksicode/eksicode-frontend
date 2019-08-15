@@ -39,7 +39,7 @@ class Telegram extends Component {
       </div>
       
       <div className="row center" id="channels">
-        {this.state.groups ? this.state.groups.map(e => {
+        {this.state.groups.map(e => {
         return (
           <div className="col s12 m4 l3">
           <div className="card hoverable">
@@ -59,7 +59,7 @@ class Telegram extends Component {
           </div>
         </div>
         )
-      }) : "Yükleniyor..."}
+      })}
       </div>
     </div>
     )
