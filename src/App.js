@@ -11,6 +11,7 @@ import Kariyer from './components/Kariyer';
 import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
 import Sidenav from './components/Sidenav';
+import Gizlilik from './components/Gizlilik';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route path='/projeler' component={Projeler} />
           <Route path='/is-ilanlari' component={Kariyer} />
           <Route path='/iletisim' component={Iletisim} />
+          <Route path='/gizlilik-politikasi' component={Gizlilik} />
           <Footer />
         </div>
       </BrowserRouter>

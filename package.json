@@ -28,7 +28,6 @@
     "html-webpack-plugin": "2.29.0",
     "jest": "24.8.0",
     "materialize-css": "^1.0.0-rc.2",
-    "node-sass": "^4.9.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -94,5 +93,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
