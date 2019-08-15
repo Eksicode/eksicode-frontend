@@ -6,8 +6,8 @@ class Footer extends Component {
       <div className="footer center">
         <div className="container">
           <div className="row center">
-            <a href="https://github.com/Eksicode" target="_blank"><i className="logos-footer devicon-github-plain"></i></a>
-            <a href="https://twitter.com/eksicode" target="_blank"><i className="logos-footer devicon-twitter-plain"></i></a>
+            <a href="https://github.com/Eksicode" rel="noopener noreferrer" target="_blank"><i className="logos-footer devicon-github-plain"></i></a>
+            <a href="https://twitter.com/eksicode" rel="noopener noreferrer" target="_blank"><i className="logos-footer devicon-twitter-plain"></i></a>
             <p>2018 - eksicode.org</p>
           </div>
         </div>

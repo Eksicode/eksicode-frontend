@@ -8,6 +8,15 @@ body {
   background-color: var(--eksicode);
 }
 
+.disabled {
+  cursor: default;
+  color: #cdcdcd;
+}
+
+.card-title {
+  font-size: 1.2rem !important;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
