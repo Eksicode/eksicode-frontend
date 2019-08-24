@@ -53,8 +53,8 @@ class Kaynaklar extends Component {
         let pages = [];
         for (let i = 0; i < this.state.pageCount; i++) {
             pages.push(
-                <li
-                    class={`${
+                <li key={i}
+                className={`${
                         this.state.pageNum === i ? "active light-green" : ""
                     }  waves-effect`}
                 >
@@ -86,7 +86,7 @@ class Kaynaklar extends Component {
                                     <div className="row">
                                         {this.state.sources.map(e => {
                                             return (
-                                                <div className="col xl4 l4 m6 s12">
+                                                <div className="col xl4 l4 m6 s12" key={e.id} >
                                                     <div className="card hoverable eksicode">
                                                         <div className="card-content white-text">
                                                             <span className="card-title">
@@ -110,30 +110,30 @@ class Kaynaklar extends Component {
                                         })}
                                     </div>
                                 </ul>
-                                <ul class="pagination center">
+                                <ul className="pagination center">
                                     <li
                                         onClick={this.prevPage.bind(this)}
-                                        class={
+                                        className={
                                             this.state.pageNum === 0
                                                 ? "disabled"
                                                 : "waves-effect"
                                         }
                                     >
-                                        <i class="material-icons">
+                                        <i className="material-icons">
                                             chevron_left
                                         </i>
                                     </li>
                                     {this.createPages()}
                                     <li
                                         onClick={this.nextPage.bind(this)}
-                                        class={
+                                        className={
                                             this.state.pageNum ===
                                             this.state.pageCount - 1
                                                 ? "disabled"
                                                 : "waves-effect"
                                         }
                                     >
-                                        <i class="material-icons">
+                                        <i className="material-icons">
                                             chevron_right
                                         </i>
                                     </li>
@@ -143,16 +143,16 @@ class Kaynaklar extends Component {
                     } else {
                         return (
                             <div className="row center">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-eksicode-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle" />
+                                <div className="preloader-wrapper small active">
+                                    <div className="spinner-layer spinner-eksicode-only">
+                                        <div className="circle-clipper left">
+                                            <div className="circle" />
                                         </div>
-                                        <div class="gap-patch">
-                                            <div class="circle" />
+                                        <div className="gap-patch">
+                                            <div className="circle" />
                                         </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle" />
+                                        <div className="circle-clipper right">
+                                            <div className="circle" />
                                         </div>
                                     </div>
                                 </div>

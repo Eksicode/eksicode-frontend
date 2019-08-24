@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 //import { Link } from 'react-router-dom';
+=======
+>>>>>>> a3da04f5b35ad2399d4f987629c7b171f38e6faf
 
 class Gizlilik extends Component {
     render() {
@@ -10,7 +13,7 @@ class Gizlilik extends Component {
                         <h1>Gizlilik Politikası</h1>
                     </div>
                 </div>
-        <div class="row">
+        <div className="row">
             Eksicode.org sitesi olarak kişisel gizlilik haklarınıza saygı duyuyor ve sitemizde geçirdiğiniz süre zarfında bunu sağlamak için çaba sarf ediyoruz. 
             Kişisel bilgilerinizin güvenliği ile ilgili açıklamalar aşağıda açıklanmış ve bilginize sunulmuştur.
             <h2>KAYIT DOSYALARI</h2>
