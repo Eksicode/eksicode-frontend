@@ -7,7 +7,7 @@ class Footer extends Component {
             <footer className="page-footer eksicode">
                 <div className="container center-align">
                     <div className="row">
-                        <div className="col l12">
+                        <div className="col s12 m12 l12 xl12">
                             <a
                                 className="white-text footer-logo"
                                 href="https://github.com/Eksicode"

@@ -1,6 +1,9 @@
 h1 {
   font-size: 3rem;
   font-weight: 600;
+  @media (max-width: 400px) {
+    font-size: 2.5rem;
+  }
 }
 h2 {
   font-size: 2rem;
@@ -18,16 +21,23 @@ p {
   position: absolute;
   z-index: -1;
   margin-left: -1rem;
-  margin-top: -3.35rem;
+  margin-top: -2.65rem;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
   &__kaynaklar {
-    width: 20.2rem;
+    width: 12.2rem;
   }
   &__projeler {
     width: 16.2rem;
   }
   &__gruplar {
-    width: 15.8rem;
+    width: 20.5rem;
+    @media (max-width: 313px) {
+      width: 12rem;
+      margin-top: -3.65rem;
+    }
+  }
+  &__discord {
+    width: 10rem;
   }
   &__kariyer {
     width: 18.5rem;
@@ -37,8 +47,8 @@ p {
   }
 }
 h2:hover + .box {
-  height: 5rem;
-  margin-top: -5.8rem;
+  height: 4rem;
+  margin-top: -4.6rem;
   &__kaynaklar {
     background-color: var(--light-yesil);
   }
@@ -47,6 +57,13 @@ h2:hover + .box {
   }
   &__gruplar {
     background-color: var(--mavi);
+    @media (max-width: 313px) {
+      height: 5.4rem;
+      margin-top: -6.6rem;
+    }
+  }
+  &__discord {
+    background-color: var(--blurple);
   }
   &__kariyer {
     background-color: var(--eksicode);
@@ -61,10 +78,21 @@ h2:hover + .box {
   margin-top: -14rem;
   position: relative;
   z-index: -1;
+  @media (max-width: 600px) {
+    margin-top: 0;
+  } 
 }
 .plane {
   margin-top: -1em;
   margin-right: 5em;
+}
+.discord {
+  margin-left: 5rem;
+  width: 20vw;
+  @media (max-width: 600px) {
+    margin-top: -1em;
+    width: 30vw;
+  }
 }
 .eksi {
   padding-bottom: 0;
