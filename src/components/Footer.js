@@ -30,7 +30,7 @@ class Footer extends Component {
                 <div className="footer-copyright">
                     <div className="container center-align">
                         2017 - 2019 eksicode.org |{" "}
-                        <Link to="/gizlilik-politikasi">
+                        <Link className="blue-text text-darken-4" to="/gizlilik-politikasi">
                             Gizlilik Politikası
                         </Link>
                     </div>
