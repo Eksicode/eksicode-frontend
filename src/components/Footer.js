@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
     render() {
@@ -7,7 +7,7 @@ class Footer extends Component {
             <footer className="page-footer eksicode">
                 <div className="container center-align">
                     <div className="row">
-                        <div className="col l12">
+                        <div className="col s12 m12 l12 xl12">
                             <a
                                 className="white-text footer-logo"
                                 href="https://github.com/Eksicode"
@@ -29,7 +29,10 @@ class Footer extends Component {
                 </div>
                 <div className="footer-copyright">
                     <div className="container center-align">
-                        2017 - 2019 eksicode.org | <Link to="/gizlilik-politikasi">Gizlilik Politikası</Link>
+                        2017 - 2019 eksicode.org |{" "}
+                        <Link className="blue-text text-darken-4" to="/gizlilik-politikasi">
+                            Gizlilik Politikası
+                        </Link>
                     </div>
                 </div>
             </footer>

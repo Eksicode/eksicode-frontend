@@ -12,6 +12,7 @@ class Nav extends Component {
               
               <li className="desktop"><Link to="/kaynaklar">KAYNAKLAR</Link></li>
               <li className="desktop"><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
+              <li className="desktop"><a href="https://discord.gg/cZRhbuJ">DISCORD</a></li>
               {/*<li className="desktop"><Link to="/amacimiz">AMACIMIZ</Link></li>
               <li className="desktop"><Link to="/projeler">PROJELER</Link></li>
               <li className="desktop"><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>

@@ -21,6 +21,7 @@ class Sidenav extends Component {
         
         <li><Link to="/kaynaklar">KAYNAKLAR</Link></li>
         <li><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
+        <li><a href="https://discord.gg/cZRhbuJ">DISCORD</a></li>
         {/*<li><Link to="/amacimiz">AMACIMIZ</Link></li>
         <li><Link to="/projeler">PROJELER</Link></li>
         <li><Link to="/is-ilanlari">İŞ İLANLARI</Link></li>

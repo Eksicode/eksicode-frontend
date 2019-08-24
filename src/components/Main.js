@@ -19,7 +19,7 @@ class Main extends Component {
         <div className="section">
           <div className="container">
             <div className="row">
-              <div className="col s8 offset-s4 m8 offset-m4 l8 offset-l4">
+              <div className="col s12 m8 offset-m4 l8 offset-l4">
                 <h1>Yazılımcı Geliştirme Platformu</h1>
                 <p className="flow-text">
                   ekşiCode, yazılımcıların serüveninde onları yalnız bırakmaz,
@@ -86,6 +86,24 @@ class Main extends Component {
           <img
             className="drawings plane responsive-img"
             src={require("../assets/plane.svg")}
+            alt=""
+          />
+        </div>
+        <div className="section">
+          <div className="container">
+            <div className="row">
+              <div className="col s12 m8 offset-m4 l6 offset-l6">
+                <h2><a href="https://discord.gg/cZRhbuJ" target="_blank" rel="noopener noreferrer" style={{color: 'black'}}>Discord</a></h2>
+                <div className="box box__discord"></div>
+                <p className="flow-text">
+                  Discord sunucumuzda sesli sohbete katılabilirsin.
+                </p>
+              </div>
+            </div>
+          </div>
+          <img
+            className="drawings discord responsive-img"
+            src={require("../assets/Discord.svg")}
             alt=""
           />
         </div>

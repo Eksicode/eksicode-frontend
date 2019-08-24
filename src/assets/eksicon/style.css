@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'eksicon';
+  src:  url('fonts/eksicon.eot?dlt964');
+  src:  url('fonts/eksicon.eot?dlt964#iefix') format('embedded-opentype'),
+    url('fonts/eksicon.ttf?dlt964') format('truetype'),
+    url('fonts/eksicon.woff?dlt964') format('woff'),
+    url('fonts/eksicon.svg?dlt964#eksicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'eksicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eksicon-blockchain:before {
+  content: "\e900";
+}
+.eksicon-kotlin .path1:before {
+  content: "\e901";
+  color: rgb(100, 118, 224);
+}
+.eksicon-kotlin .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(29, 144, 217);
+}
+.eksicon-kotlin .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(237, 128, 44);
+}
+.eksicon-flutter .path1:before {
+  content: "\e904";
+  color: rgb(71, 197, 251);
+}
+.eksicon-flutter .path2:before {
+  content: "\e905";
+  margin-left: -0.8076171875em;
+  color: rgb(71, 197, 251);
+}
+.eksicon-flutter .path3:before {
+  content: "\e906";
+  margin-left: -0.8076171875em;
+  color: rgb(0, 86, 158);
+}
+.eksicon-flutter .path4:before {
+  content: "\e907";
+  margin-left: -0.8076171875em;
+  color: rgb(0, 181, 248);
+}
+.eksicon-flutter .path5:before {
+  content: "\e908";
+  margin-left: -0.8076171875em;
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+.eksicon-rlang .path1:before {
+  content: "\e909";
+  color: rgb(0, 0, 0);
+}
+.eksicon-rlang .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(33, 101, 182);
+}
+.eksicon-rust:before {
+  content: "\e90b";
+}
+.eksicon-sap .path1:before {
+  content: "\e90c";
+  color: rgb(1, 65, 133);
+}
+.eksicon-sap .path2:before {
+  content: "\e90d";
+  margin-left: -2.017578125em;
+  color: rgb(255, 255, 255);
+}
+.eksicon-sap .path3:before {
+  content: "\e90e";
+  margin-left: -2.017578125em;
+  color: rgb(1, 65, 133);
+}
