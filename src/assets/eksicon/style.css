@@ -1,15 +1,14 @@
 @font-face {
   font-family: 'eksicon';
-  src:  url('fonts/eksicon.eot?dlt964');
-  src:  url('fonts/eksicon.eot?dlt964#iefix') format('embedded-opentype'),
-    url('fonts/eksicon.ttf?dlt964') format('truetype'),
-    url('fonts/eksicon.woff?dlt964') format('woff'),
-    url('fonts/eksicon.svg?dlt964#eksicon') format('svg');
+  src:
+    url('fonts/eksicon.ttf?ylbhof') format('truetype'),
+    url('fonts/eksicon.woff?ylbhof') format('woff'),
+    url('fonts/eksicon.svg?ylbhof#eksicon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-i {
+.eksicon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'eksicon' !important;
   speak: none;
@@ -24,20 +23,24 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.eksicon-blockchain:before {
-  content: "\e900";
+.eksicon-bitcoin:before {
+  content: "\e901";
+  color: #f7931a;
+}
+.eksicon-matlab:before {
+  content: "\e902";
 }
 .eksicon-kotlin .path1:before {
-  content: "\e901";
+  content: "\1f323";
   color: rgb(100, 118, 224);
 }
 .eksicon-kotlin .path2:before {
-  content: "\e902";
+  content: "\1f324";
   margin-left: -1em;
   color: rgb(29, 144, 217);
 }
 .eksicon-kotlin .path3:before {
-  content: "\e903";
+  content: "\1f325";
   margin-left: -1em;
   color: rgb(237, 128, 44);
 }
@@ -91,4 +94,10 @@ i {
   content: "\e90e";
   margin-left: -2.017578125em;
   color: rgb(1, 65, 133);
+}
+.eksicon-shield:before {
+  content: "\e903";
+}
+.eksicon-blockchain:before {
+  content: "\e900";
 }

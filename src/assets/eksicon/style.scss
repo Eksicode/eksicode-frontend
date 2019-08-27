@@ -2,16 +2,15 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?dlt964');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?dlt964#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?dlt964') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?dlt964') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?dlt964##{$icomoon-font-family}') format('svg');
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ylbhof') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ylbhof') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ylbhof##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-i.eksicon {
+.eksicon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   speak: none;
@@ -26,9 +25,15 @@ i.eksicon {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.eksicon-blockchain {
+.eksicon-bitcoin {
   &:before {
-    content: $eksicon-blockchain; 
+    content: $eksicon-bitcoin;     
+    color: #f7931a;
+  }
+}
+.eksicon-matlab {
+  &:before {
+    content: $eksicon-matlab; 
   }
 }
 .eksicon-kotlin .path1 {
@@ -122,6 +127,16 @@ i.eksicon {
     content: $eksicon-sap-path3;  
     margin-left: -2.017578125em;  
     color: rgb(1, 65, 133);
+  }
+}
+.eksicon-shield {
+  &:before {
+    content: $eksicon-shield; 
+  }
+}
+.eksicon-blockchain {
+  &:before {
+    content: $eksicon-blockchain; 
   }
 }
 
