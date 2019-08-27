@@ -44,18 +44,18 @@ class Telegram extends Component {
                 </div>
 
                 <div className="row center" id="channels">
-                    {this.state.groups.map(e => {
+                    {this.state.groups.map((e, id) => {
                         return (
-                            <div className="col s12 m4 l3" key={e.id}>
+                            <div className="col s12 m4 l3" key={id}>
                                 <div className="card hoverable">
                                     <div className="card-content black-text">
                                         <i className={`logos ${e.logo}`}>
                                             {e.icon}
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                            <span class="path4"></span>
-                                            <span class="path5"></span>
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                            <span className="path4"></span>
+                                            <span className="path5"></span>
                                         </i>
                                         <h4>{e.name}</h4>
                                         {/*<p>{e.members} Üye</p>*/}
