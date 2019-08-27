@@ -34,7 +34,7 @@ class Main extends Component {
             alt=""
           />
         </div>
-        <div className="section">
+        {/*<div className="section">
           <div className="container">
             <div className="row">
               <div className="col s6 m8 l6">
@@ -53,7 +53,7 @@ class Main extends Component {
             alt=""
           />
         </div>
-        {/*<div className="section">
+        <div className="section">
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l6 offset-l6">
