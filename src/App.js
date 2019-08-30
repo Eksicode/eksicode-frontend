@@ -14,9 +14,6 @@ import Gizlilik from './components/Gizlilik';
 import M from "materialize-css";
 
 class App extends Component {
-  componentDidMount() {
-    M.AutoInit();
-  }
   render() {
     return (
       <BrowserRouter>
