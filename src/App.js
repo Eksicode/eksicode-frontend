@@ -11,7 +11,6 @@ import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
 import Sidenav from './components/Sidenav';
 import Gizlilik from './components/Gizlilik';
-import M from "materialize-css";
 
 class App extends Component {
   render() {
