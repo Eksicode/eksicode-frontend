@@ -5,7 +5,6 @@ import Main from './components/Main';
 import Amacimiz from './components/Amacimiz';
 import Kaynaklar from './components/Kaynaklar';
 import Telegram from './components/Telegram';
-import Kilavuzlar from './components/Kilavuzlar';
 import Projeler from './components/Projeler';
 import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
@@ -23,7 +22,6 @@ class App extends Component {
           <Route path='/amacimiz' component={Amacimiz} />
           <Route path='/kaynaklar' component={Kaynaklar} />
           <Route path='/telegram-gruplari' component={Telegram} />
-          <Route path='/kilavuzlar' component={Kilavuzlar} />
           <Route path='/projeler' component={Projeler} />
           <Route path='/iletisim' component={Iletisim} />
           <Route path='/gizlilik-politikasi' component={Gizlilik} />

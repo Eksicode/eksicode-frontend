@@ -1,19 +1,28 @@
 import React, { Component } from "react";
+import M from 'materialize-css';
 
 class Kaynaklar extends Component {
     constructor(props) {
         super(props);
         this.state = {
             sources: [],
+            channels: [],
+            filterChannelName: "",
+            filterChannelID: "",
             pageCount: [],
             pageNum: 0
         };
     }
     componentWillMount() {
         document.title = "Eksicode.org - Kaynaklar";
-        fetch("http://api.eksicode.org/kaynaklars?_start=0&_limit=12")
+        fetch(`http://api.eksicode.org/kaynaklars?_start=0&_limit=12`)
             .then(res => res.json())
             .then(data => this.setState({ sources: data }));
+        fetch("http://api.eksicode.org/telegrams")
+            .then(res => res.json())
+            .then(channels => {
+                this.setState({channels})
+            })
         fetch("http://api.eksicode.org/kaynaklars/count")
             .then(res => res.text())
             .then(data => {
@@ -27,14 +36,24 @@ class Kaynaklar extends Component {
                 this.setState({ pageCount });
             });
     }
+    componentDidMount() {
+        const dropdown = document.querySelector(".dropdown-trigger");
+        const instance = M.Dropdown.init(dropdown, {constrainWidth: false});
+    }
     componentDidUpdate(previousProps, previousState) {
-        if (this.state.pageNum !== previousState.pageNum) {
+        if (this.state.pageNum !== previousState.pageNum || this.state.filterChannelID !== previousState.filterChannelID) {
             fetch(
                 `http://api.eksicode.org/kaynaklars?_start=${this.state
-                    .pageNum * 12}&_limit=${12}`
+                    .pageNum * 12}&_limit=${12}${this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""}`
             )
                 .then(res => res.json())
-                .then(data => this.setState({ sources: data }));
+                .then(data => {
+                    if (data.length) {
+                        this.setState({ sources: data });
+                    } else {
+                        this.setState({ sources: "none" });
+                    }
+                });
         }
     }
     nextPage() {
@@ -78,8 +97,22 @@ class Kaynaklar extends Component {
                         </p>
                     </div>
                 </div>
+                <div className="row">
+                    <div className="col m12 l6">
+                        <b>Gruplar:</b>
+                        <a className='dropdown-trigger btn eksicode' href='#' data-target='dropdown1'>{this.state.filterChannelName ? this.state.filterChannelName : "Tümü"}</a>
+                        <ul id='dropdown1' className='dropdown-content'>
+                            <li><a onClick={() => this.setState({filterChannelName: "", filterChannelID: ""})} href="#!">Tümü</a></li>
+                            {this.state.channels.map(e => {
+                                return (
+                                    <li key={e.id}><a onClick={() => this.setState({filterChannelName: e.name, filterChannelID: e.channelID})} href="#!">{e.name}</a></li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
                 {(() => {
-                    if (this.state.sources.length) {
+                    if (this.state.sources.length && this.state.sources !== "none") {
                         return (
                             <div className="row">
                                 <ul>
@@ -140,6 +173,12 @@ class Kaynaklar extends Component {
                                 </ul>
                             </div>
                         );
+                    } else if (this.state.sources === "none") {
+                        return (
+                            <div className="row center">
+                                <b>Hiç sonuç yok.</b>
+                            </div>
+                        )
                     } else {
                         return (
                             <div className="row center">
