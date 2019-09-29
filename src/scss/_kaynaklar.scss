@@ -2,6 +2,24 @@
     background: white !important;
 }
 
-.dropdown-trigger {
-    margin-left: 1rem;
+.search {
+    label {
+        color: var(--eksicode) !important;
+    }
+    input[type=text]:focus + label {
+        color: var(--eksicode) !important;
+      }
+    input[type=text]:focus {
+        border-bottom: 1px solid var(--eksicode) !important;
+        box-shadow: 0 1px 0 0 var(--eksicode) !important;
+    }
+}
+
+.input-field {
+    .select-wrapper ul li>span {
+        color: var(--eksicode) !important;
+    }
+    .dropdown-trigger:focus {
+        border-bottom: 1px solid var(--eksicode) !important;
+    }
 }
