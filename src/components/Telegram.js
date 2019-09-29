@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import TelegramLogo from "../assets/telegram.svg";
-import groups from "./groups.json";
 
 class Telegram extends Component {
     constructor(props) {
@@ -9,15 +8,11 @@ class Telegram extends Component {
             groups: []
         };
     }
-    /*componentDidMount() {
-    document.title = "Eksicode.org - Telegram Grupları";
-    fetch("http://api.eksicode.org/telegrams")
-    .then(res => res.json())
-    .then(list => this.setState({groups: list}))
-  }*/
-    componentDidMount() {
-        // Şimdilik Statik çekiyoruz
-        this.setState({ groups });
+    componentWillMount() {
+        document.title = "Eksicode.org - Telegram Grupları";
+        fetch("http://api.eksicode.org/telegrams")
+            .then(res => res.json())
+        .then(list => this.setState({groups: list}))
     }
     render() {
         return (

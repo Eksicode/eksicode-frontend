@@ -1,19 +1,30 @@
 import React, { Component } from "react";
+import M from 'materialize-css';
 
 class Kaynaklar extends Component {
     constructor(props) {
         super(props);
         this.state = {
             sources: [],
+            channels: [],
+            filterChannelID: "",
             pageCount: [],
+            searchQuery: "",
             pageNum: 0
         };
     }
     componentWillMount() {
+        const dropdown = document.querySelectorAll("select");
+        M.FormSelect.init(dropdown);
         document.title = "Eksicode.org - Kaynaklar";
-        fetch("http://api.eksicode.org/kaynaklars?_start=0&_limit=12")
+        fetch(`http://api.eksicode.org/kaynaklars?_start=0&_limit=12`)
             .then(res => res.json())
             .then(data => this.setState({ sources: data }));
+        fetch("http://api.eksicode.org/telegrams")
+            .then(res => res.json())
+            .then(channels => {
+                this.setState({channels})
+            })
         fetch("http://api.eksicode.org/kaynaklars/count")
             .then(res => res.text())
             .then(data => {
@@ -28,13 +39,36 @@ class Kaynaklar extends Component {
             });
     }
     componentDidUpdate(previousProps, previousState) {
-        if (this.state.pageNum !== previousState.pageNum) {
+        if (this.state.pageNum !== previousState.pageNum || this.state.filterChannelID !== previousState.filterChannelID) {
             fetch(
                 `http://api.eksicode.org/kaynaklars?_start=${this.state
-                    .pageNum * 12}&_limit=${12}`
+                    .pageNum * 12}&_limit=${12}${this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""}`
             )
                 .then(res => res.json())
-                .then(data => this.setState({ sources: data }));
+                .then(data => {
+                    if (data.length) {
+                        this.setState({ sources: data });
+                    } else {
+                        this.setState({ sources: "none" });
+                    }
+                });
+        } else if (this.state.searchQuery !== previousState.searchQuery) {
+            fetch(
+                `http://api.eksicode.org/kaynaklars?${this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""}&_start=${this.state
+                    .pageNum * 12}&_limit=${12}${this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""}`
+            )
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length) {
+                        this.setState({ sources: data });
+                    } else {
+                        this.setState({ sources: "none" });
+                    }
+                });
+        }
+        if (previousState.channels !== this.state.channels) {
+            const dropdown = document.querySelectorAll("select");
+            M.FormSelect.init(dropdown);
         }
     }
     nextPage() {
@@ -78,8 +112,24 @@ class Kaynaklar extends Component {
                         </p>
                     </div>
                 </div>
+                <div className="row">
+                        <div className="input-field col l4 m5 s12">
+                            <select defaultValue="" onChange={e => this.setState({filterChannelID: e.target.value})}>
+                                <option value="" disabled>Grup Seçin</option>
+                                <option value="">Tümü</option>
+                                {this.state.channels.map(e => {
+                                    return <option key={e.id} value={e.channelID}>{e.name}</option>
+                                })}
+                            </select>
+                            <label>Grup</label>
+                        </div>
+                        <div className="input-field search col l8 m7 s12">
+                            <input value={this.state.searchQuery} onChange={e => this.setState({searchQuery: e.target.value})} id="search" type="text" className="validate" />
+                            <label className="active" htmlFor="search">Ara</label>
+                        </div>
+                </div>
                 {(() => {
-                    if (this.state.sources.length) {
+                    if (this.state.sources.length && this.state.sources !== "none") {
                         return (
                             <div className="row">
                                 <ul>
@@ -140,6 +190,12 @@ class Kaynaklar extends Component {
                                 </ul>
                             </div>
                         );
+                    } else if (this.state.sources === "none") {
+                        return (
+                            <div className="row center">
+                                <b>Hiç sonuç yok.</b>
+                            </div>
+                        )
                     } else {
                         return (
                             <div className="row center">

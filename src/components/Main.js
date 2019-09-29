@@ -34,7 +34,7 @@ class Main extends Component {
             alt=""
           />
         </div>
-        {/*<div className="section">
+        <div className="section">
           <div className="container">
             <div className="row">
               <div className="col s6 m8 l6">
@@ -70,7 +70,7 @@ class Main extends Component {
             src={require("../assets/girl.svg")}
             alt=""
           />
-    </div>*/}
+    </div>
         <div className="section">
           <div className="container">
             <div className="row">
