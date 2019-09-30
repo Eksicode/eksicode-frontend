@@ -53,7 +53,7 @@ class Telegram extends Component {
                                             <span className="path5"></span>
                                         </i>
                                         <h4>{e.name}</h4>
-                                        {/*<p>{e.members} Üye</p>*/}
+                                        <p>{e.members} Üye</p>
                                     </div>
                                     <a
                                         href={e.link}
