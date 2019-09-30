@@ -53,7 +53,7 @@ class Main extends Component {
             alt=""
           />
         </div>
-        <div className="section">
+        {/*<div className="section">
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l6 offset-l6">
@@ -69,7 +69,7 @@ class Main extends Component {
             className="drawings responsive-img"
             src={require("../assets/girl.svg")}
             alt=""
-          />
+    />*/}
     </div>
         <div className="section">
           <div className="container">
