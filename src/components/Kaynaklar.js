@@ -17,55 +17,62 @@ class Kaynaklar extends Component {
         const dropdown = document.querySelectorAll("select");
         M.FormSelect.init(dropdown);
         document.title = "Eksicode.org - Kaynaklar";
-        fetch(`http://api.eksicode.org/kaynaklars?_start=0&_limit=12`)
-            .then(res => res.json())
-            .then(data => this.setState({ sources: data }));
-        fetch("http://api.eksicode.org/telegrams")
-            .then(res => res.json())
-            .then(channels => {
-                this.setState({channels})
-            })
-        fetch("http://api.eksicode.org/kaynaklars/count")
-            .then(res => res.text())
-            .then(data => {
-                const count = parseInt(data, 10);
-                let pageCount;
-                if (count % 12 > 0) {
-                    pageCount = Math.floor(count / 12) + 1;
-                } else {
-                    pageCount = Math.floor(count / 12);
-                }
-                this.setState({ pageCount });
-            });
+        this.fetchKaynakData();
+        this.fetchTelegramChannels();
+        this.fetchPageCount();
+    }
+    async fetchTelegramChannels() {
+        const res = await fetch("http://api.eksicode.org/telegrams");
+        const channels = await res.json();
+        this.setState({channels});
+    }
+    async fetchPageCount() {
+        const res = await fetch(`http://api.eksicode.org/kaynaklars/count?${
+        this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
+        }${this.state.searchQuery ? "&doc_name_contains=" + this.state.searchQuery : ""}`);
+        const data = await res.json();
+
+        const count = parseInt(data, 10);
+
+        let pageCount;
+
+        if (count % 12 > 0) {
+            pageCount = Math.floor(count / 12) + 1;
+        } else {
+            pageCount = Math.floor(count / 12);
+        }
+
+        this.setState({ pageCount });
+    }
+    async fetchKaynakData() {
+        const res = await fetch(
+            `http://api.eksicode.org/kaynaklars?${
+            this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""
+            }&_start=${this.state.pageNum * 12}&_limit=${12}${
+                this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
+            }`
+        );
+        const data = await res.json();
+
+        if (data.length) {
+            this.setState({ sources: data });
+        } else {
+            this.setState({ sources: "none" });
+        }
     }
     componentDidUpdate(previousProps, previousState) {
-        if (this.state.pageNum !== previousState.pageNum || this.state.filterChannelID !== previousState.filterChannelID) {
-            fetch(
-                `http://api.eksicode.org/kaynaklars?_start=${this.state
-                    .pageNum * 12}&_limit=${12}${this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""}`
-            )
-                .then(res => res.json())
-                .then(data => {
-                    if (data.length) {
-                        this.setState({ sources: data });
-                    } else {
-                        this.setState({ sources: "none" });
-                    }
-                });
-        } else if (this.state.searchQuery !== previousState.searchQuery) {
-            fetch(
-                `http://api.eksicode.org/kaynaklars?${this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""}&_start=${this.state
-                    .pageNum * 12}&_limit=${12}${this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""}`
-            )
-                .then(res => res.json())
-                .then(data => {
-                    if (data.length) {
-                        this.setState({ sources: data });
-                    } else {
-                        this.setState({ sources: "none" });
-                    }
-                });
+        if (this.state.pageNum !== previousState.pageNum || 
+            this.state.filterChannelID !== previousState.filterChannelID ||
+            this.state.searchQuery !== previousState.searchQuery) {
+            this.fetchKaynakData();
+            this.fetchPageCount();
         }
+
+        if ((this.state.filterChannelID !== previousState.filterChannelID ||
+            this.state.searchQuery !== previousState.searchQuery) && this.state.pageNum > 0) {
+            this.setState({ pageNum: 0 });
+        }
+
         if (previousState.channels !== this.state.channels) {
             const dropdown = document.querySelectorAll("select");
             M.FormSelect.init(dropdown);
@@ -139,9 +146,9 @@ class Kaynaklar extends Component {
                                                 <div className="col xl4 l4 m6 s12" key={e.id} >
                                                     <div className="card hoverable ">
                                                         <div className="card-content">
-                                                            <span className="card-title">
+                                                            <p>
                                                                 {e.doc_name}
-                                                            </span>
+                                                            </p>
                                                         </div>
                                                         <div className="row center">
                                                             <a
