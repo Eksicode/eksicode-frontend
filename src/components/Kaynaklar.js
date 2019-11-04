@@ -22,12 +22,12 @@ class Kaynaklar extends Component {
         this.fetchPageCount();
     }
     async fetchTelegramChannels() {
-        const res = await fetch("http://api.eksicode.org/telegrams");
+        const res = await fetch("https://api.eksicode.org/telegrams");
         const channels = await res.json();
         this.setState({channels});
     }
     async fetchPageCount() {
-        const res = await fetch(`http://api.eksicode.org/kaynaklars/count?${
+        const res = await fetch(`https://api.eksicode.org/kaynaklars/count?${
         this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
         }${this.state.searchQuery ? "&doc_name_contains=" + this.state.searchQuery : ""}`);
         const data = await res.json();
@@ -46,7 +46,7 @@ class Kaynaklar extends Component {
     }
     async fetchKaynakData() {
         const res = await fetch(
-            `http://api.eksicode.org/kaynaklars?${
+            `https://api.eksicode.org/kaynaklars?${
             this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""
             }&_start=${this.state.pageNum * 12}&_limit=${12}${
                 this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""

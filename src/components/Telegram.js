@@ -10,7 +10,7 @@ class Telegram extends Component {
     }
     componentWillMount() {
         document.title = "Eksicode.org - Telegram Grupları";
-        fetch("http://api.eksicode.org/telegrams")
+        fetch("https://api.eksicode.org/telegrams")
             .then(res => res.json())
         .then(list => this.setState({groups: list}))
     }
