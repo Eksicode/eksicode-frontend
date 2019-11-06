@@ -29,7 +29,7 @@ class Kaynaklar extends Component {
     async fetchPageCount() {
         const res = await fetch(`http://api.eksicode.org/kaynaklars/count?${
         this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
-        }${this.state.searchQuery ? "&doc_name_contains=" + this.state.searchQuery : ""}`);
+        }${this.state.searchQuery ? "&doc_name_contains=" + this.state.searchQuery : ""}&approved=true`);
         const data = await res.json();
 
         const count = parseInt(data, 10);
@@ -50,7 +50,7 @@ class Kaynaklar extends Component {
             this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""
             }&_start=${this.state.pageNum * 12}&_limit=${12}${
                 this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
-            }`
+            }&approved=true`
         );
         const data = await res.json();
 

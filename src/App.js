@@ -10,6 +10,8 @@ import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
 import Sidenav from './components/Sidenav';
 import Gizlilik from './components/Gizlilik';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 
 class App extends Component {
   render() {
@@ -22,6 +24,8 @@ class App extends Component {
           <Route path='/amacimiz' component={Amacimiz} />
           <Route path='/kaynaklar' component={Kaynaklar} />
           <Route path='/telegram-gruplari' component={Telegram} />
+          <Route exact path='/blog' component={Blog} />
+          <Route exact path='/blog/:id' component={BlogPost} />
           <Route path='/projeler' component={Projeler} />
           <Route path='/iletisim' component={Iletisim} />
           <Route path='/gizlilik-politikasi' component={Gizlilik} />
