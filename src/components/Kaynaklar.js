@@ -144,14 +144,14 @@ class Kaynaklar extends Component {
                                         {this.state.sources.map(e => {
                                             return (
                                                 <div className="col xl4 l4 m6 s12" key={e.id} >
-                                                    <div className="card hoverable ">
+                                                    <div className="card hoverable break">
                                                         <div className="card-content">
                                                             <p>
                                                                 {e.doc_name}
                                                             </p>
                                                         </div>
                                                         <div className="row center">
-                                                            <a
+                                                            <a 
                                                                 href={
                                                                     e.doc_link
                                                                 }
