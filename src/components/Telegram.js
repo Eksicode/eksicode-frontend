@@ -10,7 +10,7 @@ class Telegram extends Component {
     }
     componentWillMount() {
         document.title = "Eksicode.org - Telegram Grupları";
-        fetch("https://api.eksicode.org/telegrams")
+        fetch("https://api.eksicode.org/telegrams?_sort=ListOrder:ASC")
             .then(res => res.json())
         .then(list => this.setState({groups: list}))
     }
@@ -27,7 +27,7 @@ class Telegram extends Component {
                             telegram gruplarımıza katılabilirsin.
                         </p>
                         <a
-                            href="https://t.me/joinchat/G0kqtVFVFl2cWMnmJdUniw"
+                            href="https://telegram.org/dl/"
                             rel="noopener noreferrer"
                             target="_blank"
                             className="btn-small blue waves-effect waves"
