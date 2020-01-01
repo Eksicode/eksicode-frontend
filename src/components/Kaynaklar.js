@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import debounce from 'lodash/debounce';
 import M from 'materialize-css';
 
 class Kaynaklar extends Component {
@@ -12,6 +13,8 @@ class Kaynaklar extends Component {
             searchQuery: "",
             pageNum: 0
         };
+        this.fetchKaynakDataDebounced = debounce(this.fetchKaynakData, 500)
+        this.fetchPageCountDebounced = debounce(this.fetchPageCount, 500)
     }
     componentWillMount() {
         const dropdown = document.querySelectorAll("select");
@@ -64,8 +67,8 @@ class Kaynaklar extends Component {
         if (this.state.pageNum !== previousState.pageNum || 
             this.state.filterChannelID !== previousState.filterChannelID ||
             this.state.searchQuery !== previousState.searchQuery) {
-            this.fetchKaynakData();
-            this.fetchPageCount();
+            this.fetchKaynakDataDebounced();
+            this.fetchPageCountDebounced();
         }
 
         if ((this.state.filterChannelID !== previousState.filterChannelID ||
