@@ -6,7 +6,11 @@
     background: none;
   }
   .card-content {
-    height: 12em; // Üye sayıları eklendiğinde 15em
+    height: 15em;
+  }
+  .card-content__img {
+    width: 5rem;
+    border-radius: 50%;
   }
   .btn-small {
     background-color: white;
