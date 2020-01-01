@@ -12,7 +12,7 @@ class Telegram extends Component {
         document.title = "Eksicode.org - Telegram Grupları";
         fetch("http://api.eksicode.org/telegrams")
             .then(res => res.json())
-        .then(list => this.setState({groups: list}))
+            .then(list => this.setState({groups: list}))
     }
     render() {
         return (
@@ -44,14 +44,7 @@ class Telegram extends Component {
                             <div className="col s12 m4 l3" key={id}>
                                 <div className="card hoverable">
                                     <div className="card-content black-text">
-                                        <i className={`logos ${e.logo}`}>
-                                            {e.icon}
-                                            <span className="path1"></span>
-                                            <span className="path2"></span>
-                                            <span className="path3"></span>
-                                            <span className="path4"></span>
-                                            <span className="path5"></span>
-                                        </i>
+                                        <img class="card-content__img" src={`https://api.eksicode.org${e.channelIcon.url}`} alt=""/>
                                         <h4>{e.name}</h4>
                                         <p>{e.members} Üye</p>
                                     </div>
