@@ -1,7 +1,3 @@
-.hover-kaynak:hover {
-    background: #ccc !important;
-}
-
 .search {
     label {
         color: var(--eksicode) !important;
@@ -21,5 +17,18 @@
     }
     .dropdown-trigger:focus {
         border-bottom: 1px solid var(--eksicode) !important;
+    }
+}
+
+.kaynaklar li {
+    border-bottom: 1px solid #ccc;
+
+    & a {
+        display: block;
+        padding: .8rem 0rem .8rem .8rem;
+    }
+
+    & :hover {
+        background: #e5e5e5 !important;
     }
 }

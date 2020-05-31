@@ -39,10 +39,10 @@ class Kaynaklar extends Component {
 
         let pageCount;
 
-        if (count % 12 > 0) {
-            pageCount = Math.floor(count / 12) + 1;
+        if (count % 24 > 0) {
+            pageCount = Math.floor(count / 24) + 1;
         } else {
-            pageCount = Math.floor(count / 12);
+            pageCount = Math.floor(count / 24);
         }
 
         this.setState({ pageCount });
@@ -51,7 +51,7 @@ class Kaynaklar extends Component {
         const res = await fetch(
             `https://api.eksicode.org/kaynaklars?${
             this.state.searchQuery ? "doc_name_contains=" + this.state.searchQuery : ""
-            }&_start=${this.state.pageNum * 12}&_limit=${12}${
+            }&_start=${this.state.pageNum * 24}&_limit=${24}${
                 this.state.filterChannelID ? "&doc_tg_ch=" + this.state.filterChannelID : ""
             }&approved=true`
         );
@@ -70,6 +70,8 @@ class Kaynaklar extends Component {
             this.fetchKaynakDataDebounced();
             this.fetchPageCountDebounced();
         }
+
+        window.scrollTo(0, 0)
 
         if ((this.state.filterChannelID !== previousState.filterChannelID ||
             this.state.searchQuery !== previousState.searchQuery) && this.state.pageNum > 0) {
@@ -142,33 +144,22 @@ class Kaynaklar extends Component {
                     if (this.state.sources.length && this.state.sources !== "none") {
                         return (
                             <div className="row">
-                                <ul>
-                                    <div className="row">
+                                <ul className="kaynaklar">
                                         {this.state.sources.map(e => {
                                             return (
-                                                <div className="col xl4 l4 m6 s12" key={e.id} >
-                                                    <div className="card hoverable break">
-                                                        <div className="card-content">
-                                                            <p>
-                                                                {e.doc_name}
-                                                            </p>
-                                                        </div>
-                                                        <div className="row center">
-                                                            <a 
-                                                                href={
-                                                                    e.doc_link
-                                                                }
-                                                                target="_blank"
-                                                                className="btn-small waves-effect waves hover-kaynak"
-                                                            >
-                                                                Kaynağa git
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                              <li key={e.id}>
+                                                <a 
+                                                    href={
+                                                        e.doc_link
+                                                        }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer" 
+                                                >
+                                                    {e.doc_name}
+                                                </a>
+                                            </li>
                                             );
                                         })}
-                                    </div>
                                 </ul>
                                 <ul className="pagination center">
                                     <li
