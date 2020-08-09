@@ -59,3 +59,13 @@ body {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+input[type=text] {
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.description {
+  padding: 2rem 0;
+}

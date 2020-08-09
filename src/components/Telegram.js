@@ -17,9 +17,9 @@ class Telegram extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row">
+                <div className="description row">
                     <div className="col m12 l6">
-                        <h2>Telegram Grupları</h2>
+                        <h1>Telegram Grupları</h1>
                     </div>
                     <div className="col m12 l6">
                         <p className="flow-text">
