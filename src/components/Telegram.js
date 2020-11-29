@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TelegramLogo from "../assets/telegram.svg";
+import { Link } from "react-router-dom"; 
 
 class Telegram extends Component {
     constructor(props) {
@@ -25,7 +26,9 @@ class Telegram extends Component {
                         <p className="flow-text">
                             İlgilendiğin yazılım dili veya konular ile ilgili
                             telegram gruplarımıza katılabilirsin.
+
                         </p>
+                        
                         <a
                             href="https://telegram.org/dl/"
                             rel="noopener noreferrer"
@@ -35,6 +38,11 @@ class Telegram extends Component {
                             <img src={TelegramLogo} height="12em" alt="" />
                             Telegram'ı İndir
                         </a>
+                        <br></br>
+                        <br></br>
+                            <Link to="/grup-kurallari">
+                            Grup Kuralları için tıklayın
+                        </Link>
                     </div>
                 </div>
 
