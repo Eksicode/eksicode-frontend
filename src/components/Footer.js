@@ -29,10 +29,14 @@ class Footer extends Component {
                 </div>
                 <div className="footer-copyright">
                     <div className="container center-align">
-                        2017 - 2020 eksicode.org |{" "}
+                        <Link className="blue-text text-darken-4" to="/grup-kurallari">
+                            Grup Kuralları
+                        </Link>
+                        {" "}|{" "}
                         <Link className="blue-text text-darken-4" to="/gizlilik-politikasi">
                             Gizlilik Politikası
                         </Link>
+                        <p>2017 - {(new Date().getFullYear())} eksicode.org </p>
                     </div>
                 </div>
             </footer>
