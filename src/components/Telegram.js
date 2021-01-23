@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TelegramLogo from "../assets/telegram.svg";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 class Telegram extends Component {
     constructor(props) {
@@ -9,13 +9,15 @@ class Telegram extends Component {
             groups: []
         };
     }
+
     componentWillMount() {
         document.title = "Eksicode.org - Telegram Grupları";
         fetch("https://api.eksicode.org/telegrams?_sort=ListOrder:ASC")
             .then(res => res.json())
-            .then(list => this.setState({groups: list}))
+            .then(list => this.setState({ groups: list }))
     }
     render() {
+        const { groups } = this.state;
         return (
             <div className="container">
                 <div className="description row">
@@ -28,7 +30,7 @@ class Telegram extends Component {
                             telegram gruplarımıza katılabilirsin.
 
                         </p>
-                        
+
                         <a
                             href="https://telegram.org/dl/"
                             rel="noopener noreferrer"
@@ -40,19 +42,19 @@ class Telegram extends Component {
                         </a>
                         <br></br>
                         <br></br>
-                            <Link to="/grup-kurallari">
+                        <Link to="/grup-kurallari">
                             Grup Kuralları için tıklayın
                         </Link>
                     </div>
                 </div>
 
                 <div className="row center" id="channels">
-                    {this.state.groups.map((e, id) => {
+                    {groups.length > 0 && groups.map((e, id) => {
                         return (
                             <div className="col s12 m4 l3" key={id}>
                                 <div className="card hoverable">
                                     <div className="card-content black-text">
-                                        <img class="card-content__img" src={`https://api.eksicode.org${e.channelIcon.url}`} alt=""/>
+                                        <i class={e.logo}></i>
                                         <h4>{e.name}</h4>
                                         <p>{e.members} Üye</p>
                                     </div>
