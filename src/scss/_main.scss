@@ -1,3 +1,22 @@
+
+
+a:link { 
+  color: var(--eksicode);
+}
+
+a:active {
+  color: var(--acikgri);
+}
+
+a:visited {
+  color: var(--night);
+}
+
+a:hover {
+  color: var(--kurbaga-yesili);
+  text-decoration:underline;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 600;

@@ -114,8 +114,8 @@ class Kaynaklar extends Component {
                     </div>
                     <div className="col m12 l6">
                         <p className="flow-text">
-                            İlgilendiğin yazılım dili veya konular ile ilgili
-                            kaynakları burada bulabilirsin.
+                            İlgilendiğin yazılım dili veya konular hakkında
+                            daha önce gruplarda paylaşılmış kaynakları burada bulabilirsin.
                         </p>
                     </div>
                 </div>

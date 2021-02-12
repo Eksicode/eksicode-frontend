@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import GithubLogo from "../assets/github-original.svg";
 import TwitterLogo from "../assets/twitter-original.svg";
+import DiscordLogo from "../assets/Discord-Logo-White.svg";
 
 class Footer extends Component {
     render() {
@@ -26,6 +27,14 @@ class Footer extends Component {
                             >
                                 <img className="logos-footer" src={TwitterLogo} />
                             </a>
+                            <a
+                                className="white-text footer-logo"
+                                href="https://discord.gg/cZRhbuJ"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <img className="logos-footer" src={DiscordLogo} />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -39,6 +48,10 @@ class Footer extends Component {
                             Gizlilik Politikası
                         </Link>
                         <p>2017 - {(new Date().getFullYear())} eksicode.org </p>
+                        <p>Destek Verenler: &nbsp;
+                            Alan adı: <a href="https://navisio.eu/" target="_blank"> Navisio Teknoloji</a> &nbsp;
+                            Hosting: <a href="https://gallus.ai/" target="_blank"> Gallus Teknoloji</a> 
+                        </p>
                     </div>
                 </div>
             </footer>

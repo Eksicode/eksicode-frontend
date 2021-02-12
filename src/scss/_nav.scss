@@ -11,6 +11,9 @@ nav {
       a {
         font-size: 0.875rem;
       }
+      a:visited {
+        color: var(--beyaz);
+      }
     }
   }
   @media only screen and (max-width: 1300px) {
