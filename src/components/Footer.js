@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import GithubLogo from "../assets/github-original.svg";
+import TwitterLogo from "../assets/twitter-original.svg";
 
 class Footer extends Component {
     render() {
@@ -14,7 +16,7 @@ class Footer extends Component {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="logos-footer devicon-github-plain" />
+                                <img className="logos-footer" src={GithubLogo} />
                             </a>
                             <a
                                 className="white-text footer-logo"
@@ -22,7 +24,7 @@ class Footer extends Component {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="logos-footer devicon-twitter-plain" />
+                                <img className="logos-footer" src={TwitterLogo} />
                             </a>
                         </div>
                     </div>

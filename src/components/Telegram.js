@@ -54,7 +54,7 @@ class Telegram extends Component {
                             <div className="col s12 m4 l3" key={id}>
                                 <div className="card hoverable">
                                     <div className="card-content black-text">
-                                        <i class={e.logo}></i>
+                                        <img className="logos" src={e.logo} alt={e.name}/>
                                         <h4>{e.name}</h4>
                                         <p>{e.members} Üye</p>
                                     </div>
