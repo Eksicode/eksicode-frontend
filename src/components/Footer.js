@@ -40,18 +40,15 @@ class Footer extends Component {
                 </div>
                 <div className="footer-copyright">
                     <div className="container center-align">
-                        <Link className="blue-text text-darken-4" to="/grup-kurallari">
+                        <Link className="" to="/grup-kurallari">
                             Grup Kuralları
                         </Link>
                         {" "}|{" "}
-                        <Link className="blue-text text-darken-4" to="/gizlilik-politikasi">
+                        <Link className="" to="/gizlilik-politikasi">
                             Gizlilik Politikası
                         </Link>
                         <p>2017 - {(new Date().getFullYear())} eksicode.org </p>
-                        <p>Destek Verenler: &nbsp;
-                            Alan adı: <a href="https://navisio.eu/" target="_blank"> Navisio Teknoloji</a> &nbsp;
-                            Hosting: <a href="https://gallus.ai/" target="_blank"> Gallus Teknoloji</a> 
-                        </p>
+                        <p>Alan adı & Hosting Sponsoru: <a href="https://navisio.eu/" target="_blank"> Navisio Teknoloji</a></p>
                     </div>
                 </div>
             </footer>

@@ -2,3 +2,17 @@
   height: 3rem;
   margin: 0 1rem;
 }
+.footer-copyright{
+  color: var(--beyaz);
+
+  a:link {
+    color: var(--light-yesil);
+  }
+  a:visited {
+    color: var(--beyaz);
+  }
+  a:hover {
+    color: var(--beyaz);
+    text-decoration: underline;
+  }
+}

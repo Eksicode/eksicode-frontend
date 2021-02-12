@@ -19,9 +19,12 @@
     background-color: white;
     border: 1px solid var(--night);
     box-shadow: none;
-    color: var(--night);
+    color: var(--white);
     img {
       margin-right: 0.8em;
+    }
+    a:link :active :visited  { 
+      color: var(--white);
     }
   }
   .btn-small:focus {
