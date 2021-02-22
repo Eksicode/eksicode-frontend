@@ -99,7 +99,7 @@ class Kaynaklar extends Component {
                         this.state.pageNum === i ? "active light-green" : ""
                     }  waves-effect`}
                 >
-                    <a onClick={() => this.setState({ pageNum: i })}>{i + 1}</a>
+                    <button className="paging" onClick={() => this.setState({ pageNum: i })}>{i + 1}</button>
                 </li>
             );
         }

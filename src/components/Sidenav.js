@@ -22,6 +22,7 @@ class Sidenav extends Component {
         <li className="desktop"><Link to="/amacimiz">AMACIMIZ NEDİR?</Link></li>
         <li className="desktop"><Link to="/telegram-gruplari">TELEGRAM GRUPLARI</Link></li>
         <li className="desktop"><Link to="/kaynaklar">KAYNAKLAR</Link></li>
+        <li className="desktop"><Link to="/acik-ofis-saati">AÇIK OFİS SAATİ</Link></li>
         {/*
         <li><Link to="/blog">BLOG</Link></li>        
         <li><Link to="/amacimiz">AMACIMIZ</Link></li>

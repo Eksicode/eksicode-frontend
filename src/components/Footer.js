@@ -17,7 +17,7 @@ class Footer extends Component {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <img className="logos-footer" src={GithubLogo} />
+                                <img className="logos-footer" src={GithubLogo} alt="Github" />
                             </a>
                             <a
                                 className="white-text footer-logo"
@@ -25,7 +25,7 @@ class Footer extends Component {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <img className="logos-footer" src={TwitterLogo} />
+                                <img className="logos-footer" src={TwitterLogo} alt="Twitter" />
                             </a>
                             <a
                                 className="white-text footer-logo"
@@ -33,7 +33,7 @@ class Footer extends Component {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <img className="logos-footer" src={DiscordLogo} />
+                                <img className="logos-footer" src={DiscordLogo} alt="discord"/>
                             </a>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ class Footer extends Component {
                             Gizlilik Politikası
                         </Link>
                         <p>2017 - {(new Date().getFullYear())} eksicode.org </p>
-                        <p>Alan adı & Hosting Sponsoru: <a href="https://navisio.eu/" target="_blank"> Navisio Teknoloji</a></p>
+                        <p>Alan adı & Hosting Sponsoru: <a href="https://navisio.eu/" target="_blank" rel="noopener noreferrer"> Navisio Teknoloji</a></p>
                     </div>
                 </div>
             </footer>

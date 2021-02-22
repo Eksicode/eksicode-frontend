@@ -42,6 +42,41 @@
     margin-bottom: 3rem;
 }
 
+
+.paging {
+    display: inline-block;
+    border: none;
+    padding: .5rem .5rem;
+    margin: 0px 0px 10px 0px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.paging:hover,
+.paging:focus {
+    background: var(--eksicode);
+}
+
+.paging:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.paging:active {
+    transform: scale(0.99);
+}
+
+
+
+
 .filter__groups {
     grid-column: 1 / 2;
 }

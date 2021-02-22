@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { Link} from 'react-router-dom';
 import M from "materialize-css";
+import Plane from '../assets/plane.svg';
+import Adventurer from '../assets/adventurer.svg';
+import Laptoper from '../assets/laptoper.svg';
+import Girl from '../assets/girl.svg';
+import Cards from '../assets/cards.svg';
+import Buble from '../assets/bubble.svg';
+import People1 from '../assets/e-people-1.svg';
+import People2 from '../assets/e-people-2.svg';
+import People3 from '../assets/e-people-3.svg';
 
 class Main extends Component {
   componentDidMount() {
@@ -30,7 +39,7 @@ class Main extends Component {
           </div>
           <img
             className="drawings responsive-img"
-            src={require("../assets/adventurer.svg")}
+            src={Adventurer}
             alt=""
           />
         </div>
@@ -49,15 +58,15 @@ class Main extends Component {
           </div>
           <img
             className="drawings responsive-img"
-            src={require("../assets/laptoper.svg")}
+            src={Laptoper}
             alt=""
           />
         </div>
-        {/*<div className="section">
+        <div className="section">
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l6 offset-l6">
-                <h2><Link to="/projeler" style={{color: 'black'}}>Projeler</Link></h2>
+                <h2><a href="https://github.com/Eksicode" rel="noopener noreferrer" target="_blank">Projeler</a></h2>
                 <div className="box box__projeler"></div>
                 <p className="flow-text">
                   Aktif açık kaynak projelerimize katılabilirsin.
@@ -67,10 +76,10 @@ class Main extends Component {
           </div>
           <img
             className="drawings responsive-img"
-            src={require("../assets/girl.svg")}
+            src={Girl}
             alt=""
-    />*/}
-    {/* </div> */}
+    />
+    </div> 
         <div className="section">
           <div className="container">
             <div className="row">
@@ -85,11 +94,11 @@ class Main extends Component {
           </div>
           <img
             className="drawings plane responsive-img"
-            src={require("../assets/plane.svg")}
+            src={Plane}
             alt=""
           />
         </div>
-        <div className="section">
+        {/* <div className="section">
           <div className="container">
             <div className="row">
               <div className="col s12 m8 offset-m4 l6 offset-l6">
@@ -103,15 +112,15 @@ class Main extends Component {
           </div>
           <img
             className="drawings discord responsive-img"
-            src={require("../assets/Discord.svg")}
+            src={Discord}
             alt=""
           />
-        </div>
-        {/*<div className="section">
+        </div> */}
+        <div className="section">
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l6 offset-l6">
-                <h2><Link to="/is-ilanlari" style={{color: 'black'}}>İş İlanları</Link></h2>
+                <h2><a href="https://bit.ly/2ZgtO0q" target="_blank" rel="noopener noreferrer" style={{color: 'black'}}>İş İlanları</a></h2>
                 <div className="box box__kariyer"></div>
                 <p className="flow-text">
                   Kendine uygun açık pozisyonlara bakabilir ya da size uygun
@@ -122,10 +131,10 @@ class Main extends Component {
           </div>
           <img
             className="drawings"
-            src={require("../assets/cards.svg")}
+            src={Cards}
             alt=""
           />
-  </div>*/}
+        </div>
         <div className="section eksi">
           <div className="container">
             <div className="row">
@@ -137,7 +146,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={require("../assets/bubble.svg")}
+                      src={Buble}
                       alt=""
                     />
                     <p>
@@ -148,7 +157,7 @@ class Main extends Component {
                   </div>
                   <img
                     className="people"
-                    src={require("../assets/e-people-1.svg")}
+                    src={People1}
                     alt=""
                   />
                 </div>
@@ -156,7 +165,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={require("../assets/bubble.svg")}
+                      src={Buble}
                       alt=""
                     />
                     <p>
@@ -168,7 +177,7 @@ class Main extends Component {
                   </div>
                   <img
                     className="people"
-                    src={require("../assets/e-people-2.svg")}
+                    src={People2}
                     alt=""
                   />
                 </div>
@@ -176,7 +185,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={require("../assets/bubble.svg")}
+                      src={Buble}
                       alt=""
                     />
                     <p>
@@ -188,18 +197,18 @@ class Main extends Component {
                   </div>
                   <img
                     className="people"
-                    src={require("../assets/e-people-3.svg")}
+                    src={People3}
                     alt=""
                   />
                 </div>
               </div>
               <div className="hide-on-large-only">
                 <div className="carousel">
-                  <a className="carousel-item">
+                  <div className="carousel-item">
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={require("../assets/bubble.svg")}
+                        src={Buble}
                         alt=""
                       />
                       <p>
@@ -211,15 +220,15 @@ class Main extends Component {
                     </div>
                     <img
                       className="people"
-                      src={require("../assets/e-people-1.svg")}
+                      src={People1}
                       alt=""
                     />
-                  </a>
+                  </div>
                   <a className="carousel-item">
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={require("../assets/bubble.svg")}
+                        src={Buble}
                         alt=""
                       />
                       <p>
@@ -231,7 +240,7 @@ class Main extends Component {
                     </div>
                     <img
                       className="people"
-                      src={require("../assets/e-people-2.svg")}
+                      src={People2}
                       alt=""
                     />
                   </a>
@@ -239,7 +248,7 @@ class Main extends Component {
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={require("../assets/bubble.svg")}
+                        src={Buble}
                         alt=""
                       />
                       <p>
@@ -250,7 +259,7 @@ class Main extends Component {
                     </div>
                     <img
                       className="people"
-                      src={require("../assets/e-people-3.svg")}
+                      src={People3}
                       alt=""
                     />
                   </a>

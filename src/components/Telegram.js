@@ -33,9 +33,9 @@ class Telegram extends Component {
 
                         <a
                             href="https://telegram.org/dl/"
-                            rel="noopener noreferrer"
                             target="_blank"
                             className="btn-small waves"
+                            rel="noopener noreferrer"
                         >
                             <img className="telegram-btn" src={TelegramLogo} height="12em" alt="" />
                             Telegram'ı İndir
@@ -62,6 +62,7 @@ class Telegram extends Component {
                                         href={e.link}
                                         target="_blank"
                                         className="btn-small waves-effect waves"
+                                        rel="noopener noreferrer"
                                     >
                                         <img
                                             className="telegram__logo"
