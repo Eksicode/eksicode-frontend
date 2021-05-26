@@ -48,7 +48,7 @@ class Footer extends Component {
                             Gizlilik Politikası
                         </Link>
                         <p>2017 - {(new Date().getFullYear())} eksicode.org </p>
-                        <p>Alan adı & Hosting Sponsoru: <a href="https://navisio.eu/" target="_blank" rel="noopener noreferrer"> Navisio Teknoloji</a></p>
+                        <p>Alan adı & Hosting Sponsoru: <a href="https://navisio.net/" target="_blank" rel="noopener noreferrer"> Navisio Teknoloji</a></p>
                     </div>
                 </div>
             </footer>
