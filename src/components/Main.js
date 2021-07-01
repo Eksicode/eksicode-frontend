@@ -66,7 +66,7 @@ class Main extends Component {
           <div className="container">
             <div className="row">
               <div className="col s8 offset-s4 m8 offset-m4 l6 offset-l6">
-                <h2><a href="https://github.com/Eksicode" rel="noopener noreferrer" target="_blank">Projeler</a></h2>
+                <h2><a href="https://github.com/Eksicode" style={{color: 'black'}} rel="noopener noreferrer" target="_blank">Projeler</a></h2>
                 <div className="box box__projeler"></div>
                 <p className="flow-text">
                   Aktif açık kaynak projelerimize katılabilirsin.
@@ -224,7 +224,7 @@ class Main extends Component {
                       alt=""
                     />
                   </div>
-                  <a className="carousel-item">
+                  <div className="carousel-item">
                     <div className="entry">
                       <img
                         className="bubble"
@@ -243,8 +243,8 @@ class Main extends Component {
                       src={People2}
                       alt=""
                     />
-                  </a>
-                  <a className="carousel-item">
+                  </div>
+                  <div className="carousel-item">
                     <div className="entry">
                       <img
                         className="bubble"
@@ -262,7 +262,7 @@ class Main extends Component {
                       src={People3}
                       alt=""
                     />
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

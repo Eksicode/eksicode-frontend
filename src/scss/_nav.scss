@@ -10,12 +10,10 @@ nav {
     li {
       a {
         font-size: 0.875rem;
-      }
-      a:visited {
-        color: var(--beyaz);
+        color: var(--beyaz) !important;
       }
       a:hover {
-        color: var(--beyaz);
+        color: var(--eksicode) !important;
         text-decoration: none;
       }
     }
@@ -32,4 +30,10 @@ nav {
 .logo {
   margin-top: 1.2rem;
   height: 2rem;
+}
+
+.hamburger {
+  i {
+    line-height: 36px !important;
+  }
 }
