@@ -58,8 +58,8 @@ h4 {
   }
   &__kariyer {
     width: 11rem;
-    @media only screen and (max-width: 417px){
-        width: 14.5rem;
+    @media only screen and (max-width: 265px){
+        width: 9rem;
     }
   }
 }
@@ -84,9 +84,9 @@ h2:hover + .box {
   }
   &__kariyer {
     background-color: var(--eksicode);
-    @media only screen and (max-width: 417px){
-        height: 10rem;
-        margin-top: -10.8rem;
+    @media only screen and (max-width: 265px){
+        height: 6rem;
+        margin-top: -6.5rem;
     }
   }
   

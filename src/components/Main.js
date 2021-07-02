@@ -6,7 +6,7 @@ import Adventurer from '../assets/adventurer.svg';
 import Laptoper from '../assets/laptoper.svg';
 import Girl from '../assets/girl.svg';
 import Cards from '../assets/cards.svg';
-import Buble from '../assets/bubble.svg';
+import Bubble from '../assets/bubble.svg';
 import People1 from '../assets/e-people-1.svg';
 import People2 from '../assets/e-people-2.svg';
 import People3 from '../assets/e-people-3.svg';
@@ -146,7 +146,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={Buble}
+                      src={Bubble}
                       alt=""
                     />
                     <p>
@@ -165,7 +165,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={Buble}
+                      src={Bubble}
                       alt=""
                     />
                     <p>
@@ -185,7 +185,7 @@ class Main extends Component {
                   <div className="entry">
                     <img
                       className="bubble"
-                      src={Buble}
+                      src={Bubble}
                       alt=""
                     />
                     <p>
@@ -208,7 +208,7 @@ class Main extends Component {
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={Buble}
+                        src={Bubble}
                         alt=""
                       />
                       <p>
@@ -228,7 +228,7 @@ class Main extends Component {
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={Buble}
+                        src={Bubble}
                         alt=""
                       />
                       <p>
@@ -248,7 +248,7 @@ class Main extends Component {
                     <div className="entry">
                       <img
                         className="bubble"
-                        src={Buble}
+                        src={Bubble}
                         alt=""
                       />
                       <p>
